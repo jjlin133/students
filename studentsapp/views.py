@@ -30,7 +30,7 @@ line_bot_api = LineBotApi('V7aWstPVmLp88XH+VNlrypw+gW4rbTTpVaSXop7EfZamSS2M03oNn
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('9c6c73159d1e24ed77f3a3aa6609a4b5')
 # 必須放上自己的LINE Bot SECRET_KEY
-line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='與Heroku的連結成功'))
 
 @csrf_exempt
 @require_POST
@@ -69,9 +69,8 @@ def hello3 (request,username):
                 return render(request,"hello3.html",locals())
 
 def index(request):
-                now=datetime.now()
-                username="JenJen Lin" 
-                return render(request,"listall.html",locals())
+    students = student.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序
+    return render(request,"listall.html",locals())
 
 def listone(request): 
 	try: 
