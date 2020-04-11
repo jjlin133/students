@@ -10,5 +10,6 @@ urlpatterns = [
    # path('callback/', include('studentsapp.urls')),
      url('callback/', include('studentsapp.urls')),
      path('',views.callback,name='callback'),
+     url('callback/', include('studentsapp.urls')),
      #path('',views.handl_message,name='handl_message'),
 ]
