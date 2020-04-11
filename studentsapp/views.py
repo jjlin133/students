@@ -69,8 +69,8 @@ def hello3 (request,username):
                 return render(request,"hello3.html",locals())
 
 def index(request):
-    students = student.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序
-    return render(request,"listall.html",locals())
+        students = student.objects.all().order_by('id')  #讀取資料表, 依 id 遞增排序
+        return render(request,"listall.html",locals())
 
 def listone(request): 
 	try: 
