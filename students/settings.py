@@ -41,7 +41,7 @@ LINE_CHANNEL_SECRET='9c6c73159d1e24ed77f3a3aa6609a4b5'
 #2020.0411 jjlin 更改 Dr Lo 程式碼
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['stuliff.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 DEBUG = True
 
 
